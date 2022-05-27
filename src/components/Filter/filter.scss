@@ -1,0 +1,96 @@
+$dark-blue: hsl(209, 23%, 22%);
+$very-dark-blue: hsl(207, 26%, 17%);
+$very-dark-blue-text: hsl(200, 15%, 8%); 
+$dark-gray-input: hsl(0, 0%, 52%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$dark-shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+$light-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+* {
+  box-sizing: border-box;
+}
+.filter-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.filter-inner div {
+  padding:  10px 20px;
+
+  
+}
+
+.filter-box {
+
+  select {
+    min-width: 150px;
+    border: none;
+    padding: 0 10px;
+  }
+
+  option {
+    margin-top: 15px;
+    font-size: 20px;
+    text-indent: 5px;
+    width: 60px;
+  }
+}
+
+.input-box{
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+
+  input {
+    padding: 10px;
+  }
+}
+
+.filterLight .input-box, .filterLight .filter-box {
+   box-shadow: $light-shadow;
+  background-color: white;
+
+input {
+  background-color: white;
+  border: none;
+  width: 70%;
+  color: $dark-blue;
+}
+
+select {
+  background-color: $white;
+  border: none;
+}
+}
+
+.filterDark .input-box, .filterDark .filter-box {
+  box-shadow: $dark-shadow;
+  background-color: $dark-blue;
+  
+  input {
+    width: 70%;
+    background-color: $dark-blue;
+    border: none;
+    padding: 10px;
+    color: white;
+    
+  }
+
+  input::placeholder {
+    color: hsl(0, 0%, 85%);
+  }
+
+  select {
+    background-color: $dark-blue;
+    color: $white;
+   
+
+  }
+ 
+
+ 
+}
+

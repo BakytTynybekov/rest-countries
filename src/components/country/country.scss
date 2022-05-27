@@ -1,0 +1,51 @@
+@import "../../commons/styles";
+
+.country {
+  text-decoration: none;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.country-info {
+  padding: 20px 30px 40px 30px;
+  font-family: $family;
+
+ 
+  
+  h2 {
+    margin: 10px 0 20px 0;
+    padding: 0;
+  }
+
+  p{
+    font-weight: $fw-bold;
+    font-size: $fs-md;
+    margin: 5px 0;
+    padding: 0;
+
+    span {
+      font-weight: $fw-light;
+    }
+  }
+}
+
+.countryLight{
+  background-color: $very-light-gray-bg;
+  box-shadow: $light-shadow;
+  color: $very-dark-blue-text;
+   
+}
+
+.countryDark {
+  background-color: $dark-blue-bg;
+  box-shadow: $dark-shadow;
+  color: $white;
+  
+}
