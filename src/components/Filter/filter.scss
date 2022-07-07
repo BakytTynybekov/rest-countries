@@ -1,6 +1,6 @@
 $dark-blue: hsl(209, 23%, 22%);
 $very-dark-blue: hsl(207, 26%, 17%);
-$very-dark-blue-text: hsl(200, 15%, 8%); 
+$very-dark-blue-text: hsl(200, 15%, 8%);
 $dark-gray-input: hsl(0, 0%, 52%);
 $very-light-gray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
@@ -18,13 +18,11 @@ $light-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .filter-inner div {
-  padding:  10px 20px;
-
-  
+  padding: 10px 20px;
 }
 
 .filter-box {
-
+  border-radius: 10px;
   select {
     min-width: 150px;
     border: none;
@@ -39,44 +37,52 @@ $light-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
 }
 
-.input-box{
+.input-box {
   display: flex;
   justify-content: space-evenly;
   width: 30%;
+  border-radius: 10px;
 
   input {
     padding: 10px;
   }
+
+  button {
+    background-color: inherit;
+    color: inherit;
+    border-radius: 10px;
+  }
 }
 
-.filterLight .input-box, .filterLight .filter-box {
-   box-shadow: $light-shadow;
+.filterLight .input-box,
+.filterLight .filter-box {
+  box-shadow: $light-shadow;
   background-color: white;
 
-input {
-  background-color: white;
-  border: none;
-  width: 70%;
-  color: $dark-blue;
+  input {
+    background-color: white;
+    border: none;
+    width: 70%;
+    color: $dark-blue;
+  }
+
+  select {
+    background-color: $white;
+    border: none;
+  }
 }
 
-select {
-  background-color: $white;
-  border: none;
-}
-}
-
-.filterDark .input-box, .filterDark .filter-box {
+.filterDark .input-box,
+.filterDark .filter-box {
   box-shadow: $dark-shadow;
   background-color: $dark-blue;
-  
+
   input {
     width: 70%;
     background-color: $dark-blue;
     border: none;
     padding: 10px;
     color: white;
-    
   }
 
   input::placeholder {
@@ -86,11 +92,20 @@ select {
   select {
     background-color: $dark-blue;
     color: $white;
-   
-
   }
- 
-
- 
 }
 
+@media screen and (max-width: 600px) {
+  .filter-inner {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .input-box {
+    padding: 5px 2px !important;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+}

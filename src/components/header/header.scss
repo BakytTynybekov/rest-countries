@@ -1,0 +1,58 @@
+@import "../../commons/styles";
+
+.header {
+  margin-bottom: 20px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  h1 {
+    cursor: pointer;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mode-button {
+    padding: 10px 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+      rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    cursor: pointer;
+    background-color: inherit;
+    color: inherit;
+    border-radius: 10px;
+    span {
+      margin-right: 10px;
+      padding: 5px;
+      background-color: inherit;
+      color: inherit;
+      font-size: 25px;
+    }
+    .mode-button.light {
+      background-color: $dark-blue;
+    }
+
+    .light {
+      background-color: $dark-blue;
+    }
+  }
+}
+
+.darkHeader {
+  background-color: $dark-blue-bg;
+}
+
+.lightHeader {
+  background-color: $very-light-gray-bg;
+}
+
+@media screen and (max-width: 600px) {
+  .mode-button {
+    padding: 5px !important;
+
+    span {
+      margin-right: 5px !important;
+    }
+  }
+}

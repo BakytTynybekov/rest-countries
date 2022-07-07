@@ -26,8 +26,10 @@ export default function Coutnries() {
 
   return (
     <div>
-      {error && <p>Could not fetch the daya</p>}
-      {status === "loading" && <p>Loading...</p>}
+      {error && <p className="container">Could not fetch the daya</p>}
+      {status === "loading" && (
+        <p className="container loadingHome">Loading...</p>
+      )}
       {status === "received" && (
         <div className="countries">
           <div className="container">

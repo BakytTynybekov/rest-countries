@@ -1,13 +1,12 @@
-import { useContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { GeneralContext } from "../../context/GeneralContext";
+import { useNavigate } from "react-router-dom";
 import { setTheme } from "../../store/theme/theme-action";
 import "./header.scss";
 
 export default function Header() {
   const mode = useSelector((state) => state.theme);
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const onChangeMode = () => {
     dispatch(setTheme());
   };
@@ -16,11 +15,20 @@ export default function Header() {
   return (
     <header className={headerClasses}>
       <div className="container">
-        <div className="header-inner">
-          <h1>Where in the world?</h1>
+        <div className="header__inner">
+          <h1 onClick={() => navigate("/")}>Where in the world?</h1>
           <div>
-            <button onClick={() => onChangeMode()}>
-              {mode ? "Dark" : "Lıght"} Mode
+            <button className="mode-button" onClick={() => onChangeMode()}>
+              {mode ? (
+                <span className="dark">
+                  <i class="fa-solid fa-moon"></i>
+                </span>
+              ) : (
+                <span className="light">
+                  <i class="fa-solid fa-sun"></i>
+                </span>
+              )}
+              {mode ? "Light" : "Dark"} Mode
             </button>
           </div>
         </div>

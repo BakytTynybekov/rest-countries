@@ -1,9 +1,5 @@
 @import "./commons/styles";
 
-
-
-
-
 body {
   margin: 0;
   padding: 0;
@@ -16,17 +12,16 @@ body {
 .dark {
   color: $very-light-gray;
   background-color: $very-dark-blue-bg;
+  transition: ease 200ms;
 }
 
 .light {
   color: $dark-blue;
   background-color: $very-light-gray;
+  transition: ease 300ms;
 }
 .container {
   max-width: 1440px;
   margin: auto;
   padding: 20px;
 }
-
-
-

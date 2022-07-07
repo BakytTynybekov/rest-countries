@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
-import Coutnries from "./components/countries/Countries";
-import Filter from "./components/Filter/Filter";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/header/Header";
+import CountryPage from "./Pages/CountryPage";
+import Home from "./Pages/Home";
 import "./styles.scss";
 
 export default function App() {
@@ -12,8 +13,10 @@ export default function App() {
   return (
     <div className={mainClasses}>
       <Header />
-      <Filter />
-      <Coutnries />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/country/:name" element={<CountryPage />} />
+      </Routes>
     </div>
   );
 }
